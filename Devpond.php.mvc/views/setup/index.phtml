@@ -1,0 +1,26 @@
+<?php
+    $this->layoutPage = 'views/shared/layout_empty.phtml';
+?>
+
+<H2>Which database are you installing to?</H2>
+<form action="setup" method="post" enctype="multipart/form-data">
+    <label for="databaseprovider">Database Software:</label>
+    <select name="databaseprovider" id="databaseprovider">
+        <?php
+        foreach($this->DatabaseOptions as $dbOption => $dbText)
+        {
+            $opt = '<option value="' . $dbText['Provider'] . '|' . $dbText['Type'] . '" 
+                            id="' . $dbText['Provider'] . $dbText['Type'] . '" 
+                            name="' . $dbText['Provider'] . $dbText['Type'] . '
+                        ">' . $dbText['Provider'];
+            if(!empty($dbText['Description']))
+            {
+                $opt .= ' (' . $dbText['Description'] . ')';
+            }
+            $opt .= '</option>';
+            echo $opt;
+        }
+        ?>
+    </select>
+    <input name="submitselectdb" type="submit" value="Install">
+</form>

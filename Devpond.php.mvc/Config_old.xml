@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <installed>0</installed>
+    <database>
+        <name>devpondapp</name>
+        <hostname>(localdb)\msssqllocaldb</hostname>
+        <schema>DEVPONDAPP</schema>
+        <user>root</user>
+        <password>root</password>
+        <default>false</default>
+        <provider>
+            <name>MSSQL</name>
+            <type>LOCALDB</type>
+            <file>C:\Users\Simon\DevpondApp.mdf</file>
+        </provider>
+    </database>
+    <database>
+        <name>devpondapp2</name>
+        <hostname>LOCALHOST</hostname>
+        <schema>DEVPONDAPP</schema>
+        <user>root</user>
+        <password>root</password>
+        <default>false</default>
+        <provider>
+            <name>MSSQL</name>
+            <type>LOCALDB</type>
+            <file>C:\Users\Simon\DevpondApp.mdf</file>
+        </provider>
+    </database>
+    <database>
+        <name>devpondappmysql</name>
+        <hostname>LOCALHOST</hostname>
+        <schema>DEVPONDAPP</schema>
+        <user>devpondapp</user>
+        <password>root</password>
+        <provider>
+            <name>MYSQL</name>
+        </provider>
+        <default>true</default>
+    </database>
+<!--<database name="test1" hostname="localhost" schema="test1db" user="testuser" password="testpass" default="true"><provider name="MySQL" type="Standard" file="C:\Users\test.mdf"/></database>-->
+</config>

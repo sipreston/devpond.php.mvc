@@ -1,0 +1,56 @@
+
+	<div class="row">
+		<!-- Blog Entries Column -->
+		<div class="col-md-8">
+			<h1 class="page-header">
+				Page Heading
+				<small>Secondary Text</small>
+			</h1>
+				<?php
+				if(count($this->pagePosts ) > 0) {
+					foreach ($this->pagePosts as $post) {
+						?>
+
+						<!-- First Blog Post -->
+						<h2>
+							<a href="/Post/Index/<?php echo $post->post_id ?>"><?php echo $post->post_title ?></a>
+						</h2>
+						<p class="lead">
+							by <a
+								href="/Post/UserPosts/<?php echo $post->post_author ?>"><?php echo $post->post_author_name ?></a>
+						</p>
+						<p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post->post_date ?></p>
+						<hr>
+						<a href="/Post/Index/<?php echo $post->post_id ?>">
+							<img class="img-responsive" src="images/<?php echo $post->post_image ?>" alt="">
+						</a>
+						<hr>
+						<p><?php echo $post->post_content ?></p>
+						<a class="btn btn-primary" href="/Post/Index/<?php echo $post->post_id ?>">Read More <span
+								class="glyphicon glyphicon-chevron-right"></span></a>
+
+						<hr>
+						<?php
+					}
+				}
+
+			else { echo "<h2> There are currently no posts on the site. </H2>";
+			}
+			?>
+		</div>
+
+	<!-- /.row -->
+
+	<hr>
+	<ul class="pagination">
+		<?php
+		for($i = 1; $i <= $this->row_count; $i++)
+		{
+			if($i == $this->selected_page){
+				echo "<li class='page-item disabled'><a href='#'>{$i}</a></li>";
+			} else {
+				echo "<li class='page-item'><a href='/Index?page={$i}'>{$i}</a></li>";
+			}
+		}
+		?>
+	</ul>

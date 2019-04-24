@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-file-text fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <?php
+                        $postCount = GetRecordsCount('posts');
+                        ?>
+                        <div class='huge'><?php echo $postCount ?></div>
+                        <div>Posts</div>
+                    </div>
+                </div>
+            </div>
+            <a href="/Admin/Posts">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <?php
+                        $commentCount = GetRecordsCount('comments');
+                        ?>
+                        <div class='huge'><?php echo $commentCount ?></div>
+                        <div>Comments</div>
+                    </div>
+                </div>
+            </div>
+            <a href="/Admin/Comments">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-user fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <?php
+                        $userCount = GetRecordsCount('users');
+                        ?>
+                        <div class='huge'><?php echo $userCount ?></div>
+                        <div> Users</div>
+                    </div>
+                </div>
+            </div>
+            <a href="/Admin/Users">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-list fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <?php
+                        $catCount = GetRecordsCount('categories');
+                        ?>
+                        <div class='huge'><?php echo $catCount ?></div>
+                        <div>Categories</div>
+                    </div>
+                </div>
+            </div>
+            <a href="/Admin/Categories">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

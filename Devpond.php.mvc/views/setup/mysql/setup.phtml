@@ -1,0 +1,70 @@
+<?php
+$this->layoutPage = 'views/shared/layout_empty.phtml';
+?>
+
+<div class="form">
+    <form action="setup" method="post" enctype="multipart/form-data">
+        <!-- Master database details -->
+        <div class="form-group">
+            <label for="admindatabaseuid">DBA Username:</label>
+            <input name="admindatabaseuid" id="admindatabaseuid" type="text">
+        </div>
+        <div class="form-group">
+            <label for="admindatabasepassword">DBA Password:</label>
+            <input name="admindatabasepassword" id="admindatabasepassword" type="text">
+        </div>
+        <!--
+        <div class="form-group">
+            <label for="admindatabasename">Database Name:</label>
+            <input name="admindatabasename" id="admindatabasename" type="text">
+        </div>
+        -->
+        <!--
+        <div class="form-group">
+            <label for="admindatabasefilename">Database Filename (LocalDB):</label>
+            <input name="admindatabasefileename" id="admindatabasefilename" type="text">
+        </div>
+        -->
+        <!-- New database details -->
+        <div class="form-group">
+            <label for="admindatabasehost">New Database Host:</label>
+            <input name="admindatabasehost" id="admindatabasehost" type="text">
+        </div>
+        <div class="form-group">
+            <label for="newdatabasename">New Database Name:</label>
+            <input name="newdatabasename" id="newdatabasename" type="text">
+        </div>
+        <div class="form-group">
+            <label for="newdatabasepassword">New Database Password:</label>
+            <input name="newdatabasepassword" id="newdatabasepassword" type="text">
+        </div>
+        <!-- Site Admin User details -->
+        <div class="form-group">
+            <label for="siteadminusername">Username:</label>
+            <input name="siteadminusername" id="siteadminusername" type="text">
+        </div>
+        <div class="form-group">
+            <label for="siteadminpassword">Password:</label>
+            <input name="siteadminpassword" id="siteadminpassword" type="text">
+        </div>
+        <div class="form-group">
+            <label for="siteadminfirstname">Firstname:</label>
+            <input name="siteadminfirstname" id="siteadminfirstname" type="text">
+        </div>
+        <div class="form-group">
+            <label for="siteadminlastname">Lastname:</label>
+            <input name="siteadminlastname" id="siteadminlastname" type="text">
+        </div>
+        <div class="form-group">
+            <label for="siteadminemail">Email Address:</label>
+            <input name="siteadminemail" id="siteadminemail" type="text">
+        </div>
+        <div class="form-group">
+            <label for="siteadminfilename[]">Profile Pic:</label>
+            <input name="siteadminfilename[]" id="siteadminfilename" type="file" multiple>
+        </div>
+        <input name="submitinstalldb" type="submit" value="Install">
+
+        <input type="hidden" name="databaseprovider" value="<?php echo $this->databaseprovider; ?>" />
+    </form>
+</div>

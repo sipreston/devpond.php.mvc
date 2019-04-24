@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <installed>1</installed>
+    <database>
+        <name>magic</name>
+        <hostname>LOCALHOST</hostname>
+        <schema>magic</schema>
+        <user>root</user>
+        <password></password>
+        <provider>
+            <name>MYSQL</name>
+        </provider>
+        <default>true</default>
+    </database>
+<!--<database name="test1" hostname="localhost" schema="test1db" user="testuser" password="testpass" default="true"><provider name="MySQL" type="Standard" file="C:\Users\test.mdf"/></database>-->
+</config>
