@@ -3,7 +3,7 @@
 ## Intro
 This is an experimental framework and should be considered alpha code. This repo has been created afresh with all previous WIP commits removed. This repo is for code demonstration only.
 It is written in PHP 5.6, although there was a view to rewriting it to be PHP7 compliant.
-Of course, as any developer does, as the progress, I've looked back on some things and thought I should have done it differently.
+Of course, as any developer does, as the work progresses, I've looked back on some things and thought about what could have been done differently.
 
 ## Why not use already available packages?
 
@@ -33,8 +33,9 @@ There's also references to functions that have since been removed but code not c
 
 References to super globals would be cleared up and dedicated handlers used to access those.
 
-The code for models is was originally written to use public properties, which is a major no-no. This will be changed so that properties are protected and a handler added to access those properties. Due to its nature  
-Better lazy loading.
+The code for models is was originally written to use public properties, which is a major no-no. This will be changed so that properties are protected and a handler added to access those properties. Due to its nature some of those properties may have to be none-standard, which isn't ideal.
+
+Lazy loading.
 
 PHP7 upgrade.
 
